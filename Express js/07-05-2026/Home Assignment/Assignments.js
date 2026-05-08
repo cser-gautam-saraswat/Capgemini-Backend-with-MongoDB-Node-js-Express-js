@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-const routes = require("./routingjs");
+const routes = require("./routings.js");
 
 app.use("/", routes);
 
