@@ -25,7 +25,7 @@ productRouter.get("/products/:id", async (req, res) => {
 
         const product = await Product.findOne({
          id: req.params.id
-      });;
+      });
 
         if (!product) {
             return res.status(404).json({
