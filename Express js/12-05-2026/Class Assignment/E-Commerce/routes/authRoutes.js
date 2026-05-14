@@ -2,13 +2,14 @@ const express = require("express");
 
 const router = express.Router();
 
-const {register,verifyOtp, login, refreshToken} = require("../controllers/authController");
+const {register,verifyOtp, login, refreshToken,logout} = require("../controllers/authController");
 const { protect,authorize } = require("../middleware/authMiddleware");
 
 router.post("/register", register)
 router.post("/verifyOtp", verifyOtp)
 router.post("/login", login)
 router.post("/refreshToken", refreshToken)
+router.post("/logout",logout);
 
 router.get("/profile", protect,(req,res)=>{
     res.status(200).json({

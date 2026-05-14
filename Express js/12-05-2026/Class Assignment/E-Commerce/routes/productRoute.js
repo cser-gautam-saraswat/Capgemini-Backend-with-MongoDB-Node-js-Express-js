@@ -70,7 +70,7 @@ router.patch("/:id", protect, authorize("admin"), async (req, res) => {
       }
     );
 
-    if (!replacedProduct) {
+    if (!replacedProduct) {you
       return res.status(404).json({
         message: "Product not found"
       });
